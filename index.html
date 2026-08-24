@@ -10,17 +10,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- CRT Screen Effect -->
     <div class="scanline"></div>
+    <div class="overlay"></div>
 
     <!-- Header / Navbar -->
     <header class="navbar">
-        <div class="logo">GLITCH_PROTOCOL</div>
+        <div class="logo">
+            <span class="glitch" data-text="GLITCH_PROTOCOL">GLITCH_PROTOCOL</span>
+        </div>
         <nav>
             <a href="#about">LORE</a>
             <a href="#characters">CHARACTERS</a>
             <a href="#comic">COMIC</a>
-            <a href="#roadmap">ROADMAP</a>
         </nav>
         <a href="https://opensea.io" target="_blank" class="btn-opensea">OPENSEA NFT</a>
     </header>
@@ -29,16 +30,30 @@
     <section class="hero">
         <div class="hero-content">
             <div class="badge">SECURE_CONNECTION // DISTRIBUTED_LEDGER</div>
-            <h1 class="hero-title">CYBERPUNK NFT COMIC</h1>
-            <p class="hero-subtitle">Sunken metropolis Neo-Atacama, year 2088. A core system glitch birthed "Glitch Pixels" — digital souls hunted by every faction in the city. Collect tokens and shape the comic's storyline.</p>
+            <h1 class="hero-title glitch" data-text="CYBERPUNK NFT COMIC">CYBERPUNK NFT COMIC</h1>
+            <p class="hero-subtitle">Sunken metropolis Neo-Atacama, year 2088. Collect tokens and shape the comic's storyline.</p>
             <div class="hero-buttons">
-                <a href="#comic" class="btn-primary">READ ISSUE #1</a>
+                <a href="#about" class="btn-primary">READ LORE</a>
                 <a href="#characters" class="btn-secondary">EXPLORE HEROES</a>
             </div>
         </div>
     </section>
 
-    <!-- Character Grid -->
+    <!-- Lore / Story Section -->
+    <section id="about" class="lore-section" style="padding: 60px 20px; max-width: 900px; margin: 0 auto;">
+        <h2 class="section-title"><span class="accent">//</span> PROTOCOL_LORE: ORIGINS</h2>
+        <div class="story-box" style="background: rgba(10, 10, 20, 0.8); border: 1px solid var(--neon-cyan); padding: 25px; border-radius: 8px; font-family: 'Rajdhani', sans-serif; font-size: 1.1rem; line-height: 1.6; color: #d0d0e0;">
+            <p style="margin-bottom: 15px;">Neo-Atacama didn’t sleep; it just pulsed with erratic voltage under a polluted sky. Built over the bones of an ancient submerged basin, the city was a labyrinth of glowing holographic ads, rust-caked server banks, and wet, reflected neon.</p>
+            
+            <p style="margin-bottom: 15px;">In the sub-levels, <strong style="color: var(--neon-cyan);">Kael "Zero"</strong> stared at a flickering monitor inside a makeshift rig built from scavenged chips. He wasn't a hero, just a low-tier technician trying to pay off his grid tax. But everything changed the moment he tapped into a deep corporate pipeline and stumbled upon an anomaly—a fragment of corrupted code that didn't belong to any known protocol. It was a <strong>Glitch Pixel</strong>, a sentient piece of digital consciousness. The moment Kael touched the sequence, it seared itself into his neural interface, leaving him with an uncanny ability: he could erase his digital footprint in real time, fading like a phantom from any scanner.</p>
+            
+            <p style="margin-bottom: 15px;">He didn't stay hidden for long. A burst of red laser-sights sliced through the dense smog of his workshop. <strong style="color: var(--neon-pink);">Vesper V</strong> had arrived. An elite mercenary with prototype Overclock implants visible beneath her high-collar tactical vest, Vesper was legendary in the undercity. Sent by the corporate Syndicate to retrieve the anomaly at any cost, she pinned Kael against the rusted wall. But as her visual HUD scanned his eye, it didn't register a target—it displayed the raw code of the System Glitch. Vesper froze. The data matched the encrypted breach that had compromised her own augmentations months ago. Realizing the Syndicate had betrayed her, she lowered her weapon. <em>"You're coming with me,"</em> she rasped. <em>"Before the sweepers burn this whole block."</em></p>
+            
+            <p style="margin-bottom: 0;">As they broke through the alleyways, a spherical metallic drone swooped down from the cables above. <strong style="color: #ffd700;">Spark-E</strong>, an autonomous AI bot carrying forgotten archives of the old web, projected a wireframe map ahead of them. Spark-E had been tracking the glitch's frequency, preserving fragments of a forgotten history before the city was flooded. Together, the three outcasts slipped into the dark networks of Neo-Atacama. The System Crash had begun.</p>
+        </div>
+    </section>
+
+    <!-- Characters Section -->
     <section id="characters" class="characters-section">
         <h2 class="section-title"><span class="accent">//</span> CHARACTER_ROSTER</h2>
         <p class="section-desc">Every character is a unique NFT featuring an evolving level (LVL) and dynamic stats.</p>
@@ -47,7 +62,9 @@
             <!-- Character 1 -->
             <div class="char-card">
                 <div class="char-tag">NETRUNNERS // LVL 1</div>
-                <div class="char-img-placeholder">[KAEL_ZERO_ART]</div>
+                <div class="char-img-box">
+                    <img src="images/kael.svg" alt="Kael Zero" class="char-img" onerror="this.src='https://images.unsplash.com/photo-1578632767115-351597cf2477?w=500&auto=format&fit=crop'">
+                </div>
                 <div class="char-info">
                     <h3>Kael "Zero"</h3>
                     <p class="char-bio">Former lower-tier technician. First to discover a "Glitch Pixel" inside the core network, granting him the ability to erase his digital footprint.</p>
@@ -62,7 +79,9 @@
             <!-- Character 2 -->
             <div class="char-card highlight">
                 <div class="char-tag">SYNDICATE // LVL 3</div>
-                <div class="char-img-placeholder">[VESPER_V_ART]</div>
+                <div class="char-img-box">
+                    <img src="images/vesper.svg" alt="Vesper V" class="char-img" onerror="this.src='https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=500&auto=format&fit=crop'">
+                </div>
                 <div class="char-info">
                     <h3>Vesper V</h3>
                     <p class="char-bio">Elite mercenary equipped with an Overclock implant prototype. Breached her corporate contract to uncover the truth behind the System Glitch.</p>
@@ -77,7 +96,9 @@
             <!-- Character 3 -->
             <div class="char-card">
                 <div class="char-tag">AUTONOMOUS // LVL 1</div>
-                <div class="char-img-placeholder">[SPARK_E_ART]</div>
+                <div class="char-img-box">
+                    <img src="images/spark.svg" alt="Spark-E" class="char-img" onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=500&auto=format&fit=crop'">
+                </div>
                 <div class="char-info">
                     <h3>Spark-E</h3>
                     <p class="char-bio">Autonomous AI bot retrieving encrypted archives of the old web. Preserves fragments of the city's true history.</p>
